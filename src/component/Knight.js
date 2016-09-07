@@ -13,14 +13,7 @@ const collect = (connect, monitor) => ({
   isDragging: monitor.isDragging()
 });
 
-// TODO: figure out how to get decorators to work!
-//@DragSource(KNIGHT, knightSource, collect)
-/*export default*/class Knight extends Component {
-
-  // static propTypes = {
-  //   connectDragSource: PropTypes.func.isRequired,
-  //   isDragging: PropTypes.bool.isRequired
-  // };
+class Knight extends Component {
 
   render(){
     const {connectDragSource, isDragging} = this.props;
