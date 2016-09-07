@@ -4,7 +4,11 @@ import Knight from './Knight';
 import NoPiece from './NoPiece';
 import {range} from 'lodash';
 import {maybeMoveKnight} from "../state/Game";
+import {DragDropContext} from 'react-dnd'
+import HTML5Backend from "react-dnd-html5-backend";
 
+
+@DragDropContext(HTML5Backend)
 export default class Board extends Component {
   render(){
 
@@ -31,7 +35,7 @@ Board.PropTypes = {
   ).isRequired
 };
 
-// (Int,Int) -> (Int) -> Component
+// (Int,Int,Int) -> Component
 const renderSquareOf = (kx,ky) => (i) => {
 
   const [x,y] = [i % 8, Math.floor(i / 8)];

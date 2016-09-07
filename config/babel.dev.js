@@ -10,7 +10,9 @@ module.exports = {
     // Latest stable ECMAScript features
     require.resolve('babel-preset-latest'),
     // JSX, Flow
-    require.resolve('babel-preset-react')
+    require.resolve('babel-preset-react'),
+    // Stage 1 (rest spread, decorators, etc...)
+    require.resolve('babel-preset-stage-1')
   ],
   plugins: [
     // class { handleClick = () => { } }
@@ -22,6 +24,8 @@ module.exports = {
       // Async functions are converted to generators by babel-preset-latest
       async: false
     }],
+    // Decorators
+    require.resolve('babel-plugin-transform-decorators-legacy'),
     // Polyfills the runtime needed for async/await and generators
     [require.resolve('babel-plugin-transform-runtime'), {
       helpers: false,
