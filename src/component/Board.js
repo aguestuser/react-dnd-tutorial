@@ -37,7 +37,7 @@ const renderSquare = (i,kx,ky) => {
   );
 };
 
-// (Int,Int,
+// (Int,Int,Int,Int) -> Component
 const renderPiece = (x,y,kx,ky) => {
   return (x === kx && y === ky) ? <Knight/> : <NoPiece/>;
 };
